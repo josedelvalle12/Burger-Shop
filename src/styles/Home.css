@@ -1,0 +1,235 @@
+.home {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: #202020;
+  }
+
+  .orderNow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 150px;
+  }
+  
+  .headerContainer {
+    width: auto;
+    padding-left: 50px;
+    width: 50%;
+    text-align: left;
+    flex-direction: column;
+  }
+  
+  .headerContainer h1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    height: 60px;
+    font-weight: 400;
+    color: aliceblue;
+  }
+  
+  .headerContainer p {
+    padding: 0;
+    font-size: 40px;
+    font-weight: lighter;
+    color: aliceblue;
+  }
+  
+  .headerContainer button {
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: #e78300;
+    height: 50px;
+    width: 180px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .headerContainer button:hover {
+    background-color: aliceblue;
+    color: #e78300;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+  }
+
+  .headerContainer2 {
+    display: flex;
+    width: auto 50%;
+    /* margin-left: -150px; */
+  }
+
+  .burgerList {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aliceblue; */
+  }
+
+  
+  .burgerItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+    height: 350px;
+  }
+  
+  .burgerItem:nth-child(2n+1) {
+    background-color: aliceblue;
+  }
+
+  .burgerItem:nth-child(2n) {
+    flex-direction: row-reverse;
+    color: aliceblue;
+  }
+
+  .burgerItem .burgerDesc {
+    width: 50%;
+    padding: 0 25px;
+  }
+
+  .burgerItem .burgerDesc h1 {
+    font-size: 45px;
+  }
+
+  .burgerItem .burgerDesc p {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+
+  .burgerImg {
+    width: 50%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding: 350px 0;
+  }
+
+  /* .burgerItem:nth-child(2n+1) .burgerDesc, .burgerItem:nth-child(2n+1) .burgerImg  {
+    animation-duration: 4s;
+    animation-name: slide-right;
+  }
+
+  .burgerItem:nth-child(2n) .burgerDesc, .burgerItem:nth-child(2n) .burgerImg  {
+    animation-duration: 4s;
+    animation-name: slide-left;
+  } */
+
+/* Items Animations */
+.slide-left{
+  animation: slide-left 2s linear both;
+}
+
+@keyframes slide-left{
+  0%{
+    transform:translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform:translateX(0);
+    opacity: 100;
+  }}
+
+.slide-right {
+  animation:slide-right 2s linear both
+}
+
+@keyframes slide-right{
+  0%{
+    transform:translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform:translateX(0);
+    opacity: 100;
+  }}
+
+
+/* Responsive Design */
+  @media only screen and (max-width: 650px) {
+    .home {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .orderNow {
+      flex-direction: column;
+      width: 100vw;
+    }
+
+    .headerContainer {
+      border-radius: 10px;
+      padding-left: 0;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: #202020;
+      color: white;
+    }
+  
+    .headerContainer h1 {
+      font-size: 40px;
+      height: 30px;
+      color: white;
+      width: 100vw;
+      text-align: center;
+    }
+  
+    .headerContainer p {
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+  
+    .headerContainer {
+      background-color: white;
+      color: #121619;
+      margin-bottom: 30px;
+      height: 40px;
+      width: 170px;
+    }
+  
+    .headerContainer button:hover {
+      background-color: rgb(225, 225, 225);
+      color: #121619;
+    }
+
+    .headerContainer2 {
+      height: 20%;
+      display: flex;
+    }
+
+    .headerContainer2 .burgerImg {
+      width: 25vw;
+      height: auto;
+    }
+
+    .burgerItem {
+      flex-direction: column;
+    }
+
+    .burgerItem .burgerDesc {
+      font-size: 7px;
+      width: 100%;
+    }
+  }
+
